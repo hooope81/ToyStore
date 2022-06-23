@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.cart {
+    position: absolute;
+    border: 1px solid red;
+    right: 0;
+    &__inner {
+        position: relative;
+    }
+}

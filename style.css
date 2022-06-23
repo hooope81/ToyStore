@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cart {
+  position: absolute;
+  border: 1px solid red;
+  right: 0;
+}
+
+.cart__inner {
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */
