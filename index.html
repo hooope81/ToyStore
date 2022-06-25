@@ -10,53 +10,50 @@
 </head>
 
 <body>
-    <div id="app">
-        <header class="heading__box">
-            <div class="heading">
 
-                <form action="#" @submit.prevent="filter">
-                    <input type="text" v-model="userSearch">
+    <div id="app">
+
+        <div class="heading__box">
+            <header>
+
+                <form action="#" @submit.prevent="filter()">
+                    <input type="text" v-model="userValue">
                     <button type="submit">ok</button>
                 </form>
 
-                <div class="cart__inner">
+                <div class="cart__box">
                     <button @click="show = !show">Cart</button>
-                    <div class="cart" v-show="show">
-                        <p v-if="!cartItems.length">Cart is empty</p>
-                        <div class="cart__box" v-for="item of cartItems">
-                            <div class="cart__item">
-                                <img :src="item.img" alt="">
-                                <div class="cart__left">
-                                    <h4>{{item.name}}</h4>
-                                    <p>Ouantity: {{item.quantity}}</p>
-                                    <p>Price: {{item.price}}</p>
-                                </div>
-                                <div class="cart__right">
-                                    <p>{{item.price*item.quantity}}</p>
-                                    <button @click="removeProduct(item)">X</button>
-                                </div>
+                    <div class="cart"  v-show="show">
+                        <p v-if="!cartItems.length">The cart is empty</p>
+                        <div class="cart__item" v-for="item of cartItems">
+                            <img :src="item.img" alt="Some img">
+                            <div class="cart__left">
+                                <h3>{{item.name}}</h3>
+                                <p>Quantity: {{item.quantity}}</p>
+                                <p>Price: {{item.price}}</p>
+                            </div>
+                            <div class="cart__right">
+                                <p>{{item.price*item.quantity}}</p>
+                                <button @click="toRemoveProduct(item)">X</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
+        </div>
 
         <div class="products">
-            <div class="card" v-for="product of filtered">
-                <div class=">card__box">
-                    <img :src="product.img" alt="">
-                    <h3>{{product.name}}</h3>
-                    <p>{{product.price}}</p>
-                    <button @click="addProduct(product)">To add</button>
-                </div>
+            <div class="card" v-for="item of filtered">
+                <img :src="item.img" alt="Some img">
+                <h3>{{item.name}}</h3>
+                <p>{{item.price}}</p>
+                <button @click="toAddProduct(item)">To add</button>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>
