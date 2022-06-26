@@ -16,43 +16,24 @@
         <div class="heading__box">
             <header>
 
-                <form action="#" @submit.prevent="filter()">
-                    <input type="text" v-model="userValue">
-                    <button type="submit">ok</button>
-                </form>
+                <filter-item></filter-item>
 
                 <div class="cart__box">
                     <button @click="show = !show">Cart</button>
-                    <div class="cart"  v-show="show">
-                        <p v-if="!cartItems.length">The cart is empty</p>
-                        <div class="cart__item" v-for="item of cartItems">
-                            <img :src="item.img" alt="Some img">
-                            <div class="cart__left">
-                                <h3>{{item.name}}</h3>
-                                <p>Quantity: {{item.quantity}}</p>
-                                <p>Price: {{item.price}}</p>
-                            </div>
-                            <div class="cart__right">
-                                <p>{{item.price*item.quantity}}</p>
-                                <button @click="toRemoveProduct(item)">X</button>
-                            </div>
-                        </div>
-                    </div>
+                    <cart :cart-items="cartItems" :show-cart="show"></cart>
                 </div>
+
+
             </header>
         </div>
 
-        <div class="products">
-            <div class="card" v-for="item of filtered">
-                <img :src="item.img" alt="Some img">
-                <h3>{{item.name}}</h3>
-                <p>{{item.price}}</p>
-                <button @click="toAddProduct(item)">To add</button>
-            </div>
-        </div>
+        <product :filtered="filtered" @add-product="toAddProduct"></product>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="cartComponent.js"></script>
+    <script src="productComponent.js"></script>
+    <script src="filterComponent.js"></script>
     <script src="script.js"></script>
 </body>
 
