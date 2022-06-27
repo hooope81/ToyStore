@@ -11,50 +11,27 @@
 
 <body>
     <div id="app">
-        <header class="heading__box">
-            <div class="heading">
 
-                <form action="#" @submit.prevent="filter">
-                    <input type="text" v-model="userSearch">
-                    <button type="submit">ok</button>
-                </form>
+        <header>
 
-                <div class="cart__inner">
-                    <button @click="show = !show">Cart</button>
-                    <div class="cart" v-show="show">
-                        <p v-if="!cartItems.length">Cart is empty</p>
-                        <div class="cart__box" v-for="item of cartItems">
-                            <div class="cart__item">
-                                <img :src="item.img" alt="">
-                                <div class="cart__left">
-                                    <h4>{{item.name}}</h4>
-                                    <p>Ouantity: {{item.quantity}}</p>
-                                    <p>Price: {{item.price}}</p>
-                                </div>
-                                <div class="cart__right">
-                                    <p>{{item.price*item.quantity}}</p>
-                                    <button @click="removeProduct(item)">X</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <filter-product></filter-product>
+
+            <div class="cart__box">
+                <button @click="showCart=!showCart">Cart</button>
+                <cart :cart-items="cartItems" :show-cart="showCart"></cart>
             </div>
         </header>
 
-        <div class="products">
-            <div class="card" v-for="product of filtered">
-                <div class=">card__box">
-                    <img :src="product.img" alt="">
-                    <h3>{{product.name}}</h3>
-                    <p>{{product.price}}</p>
-                    <button @click="addProduct(product)">To add</button>
-                </div>
-            </div>
-        </div>
+
+        <product :products="filtered" @add-product="toAddProduct"></product>
     </div>
 
+    
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="productComponent.js"></script>
+    <script src="cartComponent.js"></script>
+    <script src="filterComponent.js"></script>
     <script src="script.js"></script>
 
 </body>
