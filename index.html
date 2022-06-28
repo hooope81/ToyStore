@@ -11,22 +11,14 @@
 
 <body>
     <div id="app">
-
         <header>
-
-            <filter-product></filter-product>
-
-            <div class="cart__box">
-                <button @click="showCart=!showCart">Cart</button>
-                <cart :cart-items="cartItems" :show-cart="showCart"></cart>
-            </div>
+            <filter_el></filter_el>
+            <cart ref="cart"></cart>
         </header>
-
-
-        <product :products="filtered" @add-product="toAddProduct"></product>
+        <products ref="products"></products>
     </div>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="productComponent.js"></script>
