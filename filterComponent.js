@@ -1,19 +1,13 @@
-Vue.component('filter-product', {
-    template: `<form action="#" @submit.prevent="$root.filter()">
-                    <input type="text" v-model="$root.userValue">
-                    <button type="submit">ok</button>
-                </form>`
-})
-
-
 const filter_el = {
     data() {
         return {
-            userSearch: ""
+            userValue: ''
         }
-    }, 
-    template: `<form action="#" @submit.prevent="$parent.$refs.products.filter(userSearch)">
-                    <input type="text" v-model="userSearch">
-                    <button type="submit">ok</button>
-                </form>`
+    },
+    template: `
+    <form action="#" @submit.prevent="$parent.$refs.product.filter(userValue)">
+        <input type="text" v-model="userValue">
+        <button type="submit">OK</button>
+    </form>
+    `
 }
