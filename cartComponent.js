@@ -46,7 +46,13 @@ const cart = {
     },
     components: {cart_item},
     template: ` <div class="cart__box">
-                    <button @click="showCart=!showCart">Cart</button>
+                    <button @click="showCart=!showCart" class="cart__btn">
+                        <div class="cart__inner">
+                            <p>Cart</p>
+                            <img src="img/cart.png" alt="cart"> 
+                            <div class="cart__quantity">0</div>
+                         </div>
+                    </button>
                     <div class="cart" v-show="showCart">
                         <p v-if="!cartItems.length">The cart is empty</p>
                         <cart_item v-for="item of cartItems" :item="item" :key="item.id"></cart_item>

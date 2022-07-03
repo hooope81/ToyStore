@@ -1,13 +1,123 @@
+$main-color: #A5C926;
+
 * {
     padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
+
 .cart {
     position: absolute;
     border: 1px solid red;
     right: 0;
+
     &__inner {
         position: relative;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    padding: 15px;
+}
+
+//header
+.header {
+    &__fixed {
+        position: fixed;
+        background-color: $main-color;
+        width: 100%;
+    }
+
+    &__top {
+        padding: 8px 15px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 16px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 0;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+
+        & img {
+            width: 20px;
+            margin-left: 15px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 47px 15px 15px;
+
+    }
+
+    &__left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 39px;
+        margin-left: 0;
+    }
+
+    &__logo {
+        text-decoration: none;
+        font-family: 'Varela Round' sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 32px;
+        color: #333333;
+    }
+
+    &__menu {
+        & a {
+            text-decoration: none;
+            font-family: 'Open Sans' sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #111111;
+            margin-left: 36px;
+        }
+    }
+}
+
+//cart
+.cart {
+    position: absolute;
+
+    &__box {
+        position: relative;
+    }
+
+    &__btn {
+        background: none;
+        border: none;
+        font-family: 'Open Sans' sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 24px;
+        color: #111111;
+        
+    }
+    &__inner {
+        display: flex;
+        gap: 13px;
     }
 }

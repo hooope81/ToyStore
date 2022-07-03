@@ -1,8 +1,8 @@
 * {
   padding: 0;
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .cart {
@@ -10,8 +10,93 @@
   border: 1px solid red;
   right: 0;
 }
-
 .cart__inner {
   position: relative;
 }
-/*# sourceMappingURL=style.css.map */
+
+.wrapper {
+  max-width: 1200px;
+  padding: 15px;
+}
+
+.header__fixed {
+  position: fixed;
+  background-color: #A5C926;
+  width: 100%;
+}
+.header__top {
+  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.header__contacts {
+  display: flex;
+  gap: 16px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 0;
+}
+.header__links {
+  display: flex;
+  align-items: center;
+}
+.header__links img {
+  width: 20px;
+  margin-left: 15px;
+}
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 47px 15px 15px;
+}
+.header__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 39px;
+  margin-left: 0;
+}
+.header__logo {
+  text-decoration: none;
+  font-family: "Varela Round" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 32px;
+  color: #333333;
+}
+.header__menu a {
+  text-decoration: none;
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #111111;
+  margin-left: 36px;
+}
+
+.cart {
+  position: absolute;
+}
+.cart__box {
+  position: relative;
+}
+.cart__btn {
+  background: none;
+  border: none;
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #111111;
+}
+.cart__inner {
+  display: flex;
+  gap: 13px;
+}/*# sourceMappingURL=style.css.map */
