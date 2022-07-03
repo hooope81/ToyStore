@@ -8,5 +8,5 @@ const app = new Vue({
                     .catch(error=> console.log(!!!!error))
         }
     },
-    components: {product}
+    components: {cart, product, filter_el}
 })
