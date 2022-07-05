@@ -5,15 +5,6 @@
   font-family: sans-serif;
 }
 
-.cart {
-  position: absolute;
-  border: 1px solid red;
-  right: 0;
-}
-.cart__inner {
-  position: relative;
-}
-
 .wrapper {
   max-width: 1200px;
   padding: 15px;
@@ -43,6 +34,7 @@
 .header__links {
   display: flex;
   align-items: center;
+  margin-right: 0;
 }
 .header__links img {
   width: 20px;
@@ -79,9 +71,18 @@
   color: #111111;
   margin-left: 36px;
 }
+.header__right {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
 
 .cart {
   position: absolute;
+  padding: 10px;
+  top: 40px;
+  right: 0;
+  border: 1px solid #A5C926;
 }
 .cart__box {
   position: relative;
@@ -95,8 +96,102 @@
   font-size: 13px;
   line-height: 24px;
   color: #111111;
+  cursor: pointer;
 }
 .cart__inner {
   display: flex;
-  gap: 13px;
+  align-items: center;
+  gap: 15px;
+}
+.cart__inner img {
+  width: 24px;
+}
+.cart__inner p {
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.cart__quantity {
+  font-size: 14px;
+  color: #fff;
+  background-color: #A5C926;
+  border-radius: 50%;
+  padding: 0 7px;
+}
+.cart__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  font-family: "Open Sans" sans-serif;
+  margin-bottom: 10px;
+}
+.cart__card img {
+  width: 100px;
+}
+.cart__right {
+  width: 130px;
+}
+.cart__right p {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.cart__left p {
+  font-size: 14px;
+  font-weight: 700;
+}
+.cart__left button {
+  color: #A5C926;
+  font-size: 20px;
+  background: none;
+  border: 2px solid #A5C926;
+  padding: 3px 7px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.inner {
+  background-image: url("img/inner.jpg");
+  background-repeat: no-repeat;
+}
+.inner__text {
+  background-color: #fff;
+  padding: 55px 77px;
+  margin: 166px 0;
+}
+.inner__text p {
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #A5C926;
+  margin-bottom: 17px;
+}
+.inner__text h1 {
+  font-family: "Varela Round" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 48px;
+  text-align: center;
+  color: #111111;
+  margin-bottom: 20px;
+}
+.inner__text a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  padding: 12px 28px;
+  background-color: #A5C926;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

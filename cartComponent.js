@@ -1,12 +1,16 @@
 const cart_item = {
     props: ['item'],
-    template: `<div>
+    template: `<div class="cart__card">
                     <img :src="item.img" alt="Some img">
+                    <div class="cart__right">
                     <h4>{{item.name}}</h4>
-                    <p>Price:{{item.price}}</p>
+                    <p>Price:$ {{item.price}}</p>
                     <p>Quantity:{{item.quantity}}</p>
-                    <p>{{item.quantity*item.price}}</p>
-                    <button @click='$root.$refs.cart.toRemoveProduct(item)'>x</button>
+                    </div>
+                    <div class="cart__left">
+                    <p>$ {{item.quantity*item.price}}</p>
+                    <button @click='$root.$refs.cart.toRemoveProduct(item)'>X</button>
+                    </div>
                 </div>`
 }
 
@@ -51,7 +55,7 @@ const cart = {
                             <p>Cart</p>
                             <img src="img/cart.png" alt="cart"> 
                             <div class="cart__quantity">0</div>
-                         </div>
+                        </div>
                     </button>
                     <div class="cart" v-show="showCart">
                         <p v-if="!cartItems.length">The cart is empty</p>
