@@ -1,10 +1,9 @@
 const product_item = {
     props: ['item'],
-    template: `<div>
+    template: `<div class="card">
                     <img :src="item.img" alt="Some img">
                     <h4>{{item.name}}</h4>
-                    <p>{{item.price}}</p>
-                    <button @click='$root.$refs.cart.toAddProduct(item)'>To add</button>
+                    <button @click='$root.$refs.cart.toAddProduct(item)'>$ {{item.price}} USD</button>
                 </div>`
 }
 
@@ -19,23 +18,38 @@ const product = {
     },
     mounted() {
         this.$parent.getJson(this.productsUrl)
-            .then(data=> {
-                for(let item of data) {
+            .then(data => {
+                for (let item of data) {
                     this.products.push(item);
                     this.filtered.push(item);
                 }
             })
     },
-    components: {product_item},
+    components: { product_item },
     methods: {
         filter(value) {
             let rule = new RegExp(value, 'i');
-            this.filtered = this.products.filter(item=> rule.test(item.name));
+            this.filtered = this.products.filter(item => rule.test(item.name));
         }
     },
     template: `
-    <div>
-        <product_item v-for="item of filtered" :item="item" :key='item.id'></product_item>
+    <div class="product__inner">
+        <div class="wrapper product__box">
+            <div class="product__box">
+                <div class="product__header">
+                    <h2>Stuffed Animals</h2>
+                    <h4>See All Toys &#10142;</h4>
+                </div>
+                <product_item v-for="item of    filtered"  :item="item" :key='item.id' v-if="item.id<=4" class="product"></product_item>
+            </div>
+            <div>
+                <div>
+                    <h2>Wooden Toys</h2>
+                    <h4>See All Toys</h4>
+                </div>
+                <product_item v-for="item of    filtered"  :item="item" :key='item.    id' v-if="item.  id>4"></product_item>
+            </div>
+        </div>
     </div>
     `
 }
