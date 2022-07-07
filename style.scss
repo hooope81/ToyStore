@@ -101,6 +101,7 @@ $main-color: #A5C926;
     top: 40px;
     right: 0;
     border: 1px solid $main-color;
+    background-color: #fff;
 
     &__box {
         position: relative;
@@ -331,6 +332,8 @@ $main-color: #A5C926;
 .product {
     display: flex;
     justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 135px;
 
     &__inner {
         background-color: #F8F8F8;
@@ -339,21 +342,24 @@ $main-color: #A5C926;
     &__box {
         display: flex;
         flex-direction: column;
+
+
     }
-    
+
 
     &__header {
         display: flex;
         justify-content: space-between;
+        margin: 0 0 89px;
 
         & h2 {
-            font-family: 'Varela Round'sans-serif;
+            font-family: 'Varela Round' sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 28px;
             line-height: 36px;
             color: #111111;
-
+            margin-left: 0;
         }
 
         & h4 {
@@ -364,6 +370,8 @@ $main-color: #A5C926;
             line-height: 20px;
             color: #111111;
             border-bottom: 2px solid #DDDDDD;
+            margin-right: 0;
+            padding-bottom: 4px;
         }
     }
 
@@ -402,5 +410,229 @@ $main-color: #A5C926;
         padding: 2px 24px;
         margin-bottom: 12px;
         border: none;
+        cursor: pointer;
+    }
+}
+
+//reviews
+.reviews {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 109px;
+
+    & h4 {
+        font-family: 'Open Sans' sans-serif;
+        ;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        color: $main-color;
+        margin-bottom: 12px;
+    }
+
+    & h2 {
+        font-weight: 400;
+        font-size: 31px;
+        line-height: 40px;
+        text-align: center;
+        color: #111111;
+    }
+
+    &__inner {
+        background: #F8F8F8;
+    }
+
+    &__box {
+        display: flex;
+        margin: 105px 0 0;
+        justify-content: space-between;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & h3 {
+            font-family: 'Varela Round' sans-serif;
+            ;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 31px;
+            line-height: 40px;
+            color: #111111;
+            margin-bottom: 51px;
+            margin-left: 0;
+        }
+
+        & p {
+            max-width: 451px;
+            font-family: 'Open Sans' sans-serif;
+            ;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #999999;
+            margin-bottom: 26px;
+        }
+
+        & button {
+            font-family: 'Open Sans' sans-serif;
+            ;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: $main-color;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 24px;
+            margin-left: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__img {
+        width: 45%;
+        background-image: url('img/reviews.jpg');
+        border-radius: 16px;
+        height: 422px;
+    }
+
+}
+
+//email
+.email {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 47px;
+
+    &__inner {
+        background: #F8F8F8;
+    }
+
+    &__left {
+        display: flex;
+        margin-left: 0;
+
+        & p {
+            font-family: 'Varela Round' sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 32px;
+            color: #111111;
+        }
+
+        & span {
+            color: $main-color;
+        }
+    }
+
+    &__img {
+        width: 63px;
+        background: url('img/email.png') center $main-color;
+        background-repeat: no-repeat;
+        margin-right: 22px;
+    }
+
+    &__right {
+        display: flex;
+        margin-right: 0;
+        padding: 9px 0;
+
+        & input {
+            background: #F8F8F8;
+            border: 2px solid #E5E5E5;
+            border-radius: 24px;
+            width: 376px;
+            margin-right: 16px;
+        }
+
+        & button {
+            font-family: 'Open Sans' sans-serif;
+            ;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: $main-color;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+        }
+    }
+
+
+}
+
+//instagram
+.instagram {
+    display: flex;
+    flex-direction: column;
+
+    & h4 {
+        font-family: 'Open Sans' sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        color: $main-color;
+        margin-bottom: 17px;
+    }
+
+    & h2 {
+        font-family: 'Varela Round' sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 31px;
+        line-height: 40px;
+        text-align: center;
+        color: #111111;
+        margin-bottom: 85px;
+    }
+
+    & button {
+        font-family: 'Open Sans' sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        background: #A5C926;
+        border-radius: 24px;
+        padding: 12px 28px;
+        cursor: pointer;
+        border: none;
+    }
+
+    &__inner {
+        background: #F8F8F8;
+        padding: 120px 0;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 76px;
+
+        & img {
+            width: 16%;
+        }
+
     }
 }

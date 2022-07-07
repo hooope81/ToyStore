@@ -40,14 +40,18 @@ const product = {
                     <h2>Stuffed Animals</h2>
                     <h4>See All Toys &#10142;</h4>
                 </div>
-                <product_item v-for="item of    filtered"  :item="item" :key='item.id' v-if="item.id<=4" class="product"></product_item>
-            </div>
-            <div>
-                <div>
-                    <h2>Wooden Toys</h2>
-                    <h4>See All Toys</h4>
+                <div class="product">
+                <product_item v-for="item of    filtered"  :item="item" :key='item.id' v-if="item.id<=4"></product_item>
                 </div>
-                <product_item v-for="item of    filtered"  :item="item" :key='item.    id' v-if="item.  id>4"></product_item>
+            </div>
+            <div class="product__box">
+                <div class="product__header">
+                    <h2>Wooden Toys</h2>
+                    <h4>See All Toys &#10142;</h4>
+                </div>
+                <div class="product">
+                <product_item v-for="item of    filtered"  :item="item" :key='item.id' v-if="item.id>4"></product_item>
+                </div>
             </div>
         </div>
     </div>

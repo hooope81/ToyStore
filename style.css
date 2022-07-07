@@ -83,6 +83,7 @@
   top: 40px;
   right: 0;
   border: 1px solid #A5C926;
+  background-color: #fff;
 }
 .cart__box {
   position: relative;
@@ -278,6 +279,8 @@
 .product {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 135px;
 }
 .product__inner {
   background-color: #F8F8F8;
@@ -289,6 +292,7 @@
 .product__header {
   display: flex;
   justify-content: space-between;
+  margin: 0 0 89px;
 }
 .product__header h2 {
   font-family: "Varela Round" sans-serif;
@@ -297,6 +301,7 @@
   font-size: 28px;
   line-height: 36px;
   color: #111111;
+  margin-left: 0;
 }
 .product__header h4 {
   font-family: "Open Sans" sans-serif;
@@ -306,6 +311,8 @@
   line-height: 20px;
   color: #111111;
   border-bottom: 2px solid #DDDDDD;
+  margin-right: 0;
+  padding-bottom: 4px;
 }
 
 .card {
@@ -339,4 +346,193 @@
   padding: 2px 24px;
   margin-bottom: 12px;
   border: none;
+  cursor: pointer;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 109px;
+}
+.reviews h4 {
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #A5C926;
+  margin-bottom: 12px;
+}
+.reviews h2 {
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 40px;
+  text-align: center;
+  color: #111111;
+}
+.reviews__inner {
+  background: #F8F8F8;
+}
+.reviews__box {
+  display: flex;
+  margin: 105px 0 0;
+  justify-content: space-between;
+}
+.reviews__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reviews__text h3 {
+  font-family: "Varela Round" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 40px;
+  color: #111111;
+  margin-bottom: 51px;
+  margin-left: 0;
+}
+.reviews__text p {
+  max-width: 451px;
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+  margin-bottom: 26px;
+}
+.reviews__text button {
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #A5C926;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 24px;
+  margin-left: 0;
+  cursor: pointer;
+}
+.reviews__img {
+  width: 45%;
+  background-image: url("img/reviews.jpg");
+  border-radius: 16px;
+  height: 422px;
+}
+
+.email {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 47px;
+}
+.email__inner {
+  background: #F8F8F8;
+}
+.email__left {
+  display: flex;
+  margin-left: 0;
+}
+.email__left p {
+  font-family: "Varela Round" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 32px;
+  color: #111111;
+}
+.email__left span {
+  color: #A5C926;
+}
+.email__img {
+  width: 63px;
+  background: url("img/email.png") center #A5C926;
+  background-repeat: no-repeat;
+  margin-right: 22px;
+}
+.email__right {
+  display: flex;
+  margin-right: 0;
+  padding: 9px 0;
+}
+.email__right input {
+  background: #F8F8F8;
+  border: 2px solid #E5E5E5;
+  border-radius: 24px;
+  width: 376px;
+  margin-right: 16px;
+}
+.email__right button {
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #A5C926;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+}
+.instagram h4 {
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #A5C926;
+  margin-bottom: 17px;
+}
+.instagram h2 {
+  font-family: "Varela Round" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 40px;
+  text-align: center;
+  color: #111111;
+  margin-bottom: 85px;
+}
+.instagram button {
+  font-family: "Open Sans" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #A5C926;
+  border-radius: 24px;
+  padding: 12px 28px;
+  cursor: pointer;
+  border: none;
+}
+.instagram__inner {
+  background: #F8F8F8;
+  padding: 120px 0;
+}
+.instagram__box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 76px;
+}
+.instagram__box img {
+  width: 16%;
 }/*# sourceMappingURL=style.css.map */
