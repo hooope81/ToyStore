@@ -153,6 +153,19 @@
   cursor: pointer;
 }
 
+.filter form {
+  display: flex;
+}
+.filter input {
+  padding: 8px 12px;
+  border: 1px solid #A5C926;
+}
+.filter button {
+  background-color: #A5C926;
+  border: none;
+  margin-right: 10px;
+}
+
 .inner {
   background-image: url("img/inner.jpg");
   background-repeat: no-repeat;
@@ -315,26 +328,64 @@
   padding-bottom: 4px;
 }
 
+.player {
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.player video {
+  height: 100%;
+  width: 764px;
+}
+.player__inner {
+  background: #F8F8F8;
+  padding-bottom: 109px;
+}
+.player__box {
+  display: flex;
+  width: 764px;
+  align-items: center;
+}
+
 .timing {
-  width: 100%;
+  width: 763px;
   color: #A5C926;
 }
 
 .fa-play {
   width: 30px;
   margin: 0;
+  cursor: pointer;
 }
 
 .fa-pause {
   width: 30px;
   margin: 0;
+  cursor: pointer;
+}
+
+.volume {
+  margin: 0;
+}
+
+.player::after {
+  content: "Watch Our Story";
+  position: absolute;
+  top: 35%;
+  right: 50%;
+  font-family: "Varela Round" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 input[type=range] {
   height: 10px;
   -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%;
 }
 
 input[type=range]:focus {
@@ -345,7 +396,6 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 2px 2px 1px #353535;
   background: #afec6d;
   border-radius: 0px;
@@ -372,7 +422,6 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 2px 2px 1px #353535;
   background: #afec6d;
   border-radius: 0px;
@@ -393,7 +442,6 @@ input[type=range]::-ms-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  animate: 0.2s;
   background: transparent;
   border-color: transparent;
   color: transparent;

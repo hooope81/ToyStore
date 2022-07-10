@@ -186,6 +186,20 @@ $main-color: #A5C926;
 }
 
 //filter
+.filter {
+    & form {
+        display: flex;
+    }
+    & input {
+        padding: 8px 12px;
+        border: 1px solid $main-color;
+    }
+    & button {
+        background-color: $main-color;
+        border: none;
+        margin-right: 10px;
+    }
+}
 
 
 //inner
@@ -378,40 +392,89 @@ $main-color: #A5C926;
 }
 
 //video
-.timing {
-    width: 100%;
-    color: $main-color;
+.player {
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    & video {
+        height: 100%;
+        width: 764px;
+    }
+
+    &__inner {
+        background: #F8F8F8;
+        padding-bottom: 109px;
+    }
+
+    &__box {
+        display: flex;
+        width: 764px;
+        align-items: center;
+    }
 }
+
+.timing {
+    width: 763px;
+    color: $main-color;
+
+}
+
 .fa-play {
     width: 30px;
-    margin:0;
-    
+    margin: 0;
+    cursor: pointer;
 }
+
 .fa-pause {
     width: 30px;
-    margin:0;
+    margin: 0;
+    cursor: pointer;
 }
+
+.volume {
+    margin: 0;
+}
+
+.player::after {
+    content: "Watch Our Story";
+    position: absolute;
+    top: 35%;
+    right: 50%;
+    font-family: 'Varela Round' sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 
 input[type=range] {
     height: 10px;
     -webkit-appearance: none;
-    margin: 10px 0;
-    width: 100%;
-  }
-  input[type=range]:focus {
+
+
+}
+
+input[type=range]:focus {
     outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
+}
+
+input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 10px;
     cursor: pointer;
-    animate: 0.2s;
+    // animate: 0.2s;
     box-shadow: 2px 2px 1px #353535;
     background: #afec6d;
     border-radius: 0px;
     border: 1px solid #f3c846;
-  }
-  input[type=range]::-webkit-slider-thumb {
+}
+
+input[type=range]::-webkit-slider-thumb {
     box-shadow: 2px 2px 1px #353535;
     border: 1px solid #f3c846;
     height: 15px;
@@ -421,21 +484,24 @@ input[type=range] {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -3px;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
     background: #afec6d;
-  }
-  input[type=range]::-moz-range-track {
+}
+
+input[type=range]::-moz-range-track {
     width: 100%;
     height: 10px;
     cursor: pointer;
-    animate: 0.2s;
+    // animate: 0.2s;
     box-shadow: 2px 2px 1px #353535;
     background: #afec6d;
     border-radius: 0px;
     border: 1px solid #f3c846;
-  }
-  input[type=range]::-moz-range-thumb {
+}
+
+input[type=range]::-moz-range-thumb {
     box-shadow: 2px 2px 1px #353535;
     border: 1px solid #f3c846;
     height: 15px;
@@ -443,29 +509,33 @@ input[type=range] {
     border-radius: 7px;
     background: #ffffff;
     cursor: pointer;
-  }
-  input[type=range]::-ms-track {
+}
+
+input[type=range]::-ms-track {
     width: 100%;
     height: 10px;
     cursor: pointer;
-    animate: 0.2s;
+    // animate: 0.2s;
     background: transparent;
     border-color: transparent;
     color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
+}
+
+input[type=range]::-ms-fill-lower {
     background: #afec6d;
     border: 1px solid #f3c846;
     border-radius: 7px;
     box-shadow: 2px 2px 1px #353535;
-  }
-  input[type=range]::-ms-fill-upper {
+}
+
+input[type=range]::-ms-fill-upper {
     background: #afec6d;
     border: 1px solid #f3c846;
     border-radius: 7px;
     box-shadow: 2px 2px 1px #353535;
-  }
-  input[type=range]::-ms-thumb {
+}
+
+input[type=range]::-ms-thumb {
     margin-top: 1px;
     box-shadow: 2px 2px 1px #353535;
     border: 1px solid #f3c846;
@@ -474,13 +544,15 @@ input[type=range] {
     border-radius: 7px;
     background: #ffffff;
     cursor: pointer;
-  }
-  input[type=range]:focus::-ms-fill-lower {
+}
+
+input[type=range]:focus::-ms-fill-lower {
     background: #afec6d;
-  }
-  input[type=range]:focus::-ms-fill-upper {
+}
+
+input[type=range]:focus::-ms-fill-upper {
     background: #afec6d;
-  }
+}
 
 
 //card

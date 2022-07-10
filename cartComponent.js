@@ -19,7 +19,8 @@ const cart = {
         return {
             cartUrl: 'cart.json',
             cartItems: [],
-            showCart: false
+            showCart: false,
+            count: 3
         }
     },
     methods: {
@@ -31,6 +32,7 @@ const cart = {
                 let prod = Object.assign({quantity:1}, item);
                 this.cartItems.push(prod);
             }
+            this.count++;
         },
         toRemoveProduct(item) {
             if(item.quantity>1){
@@ -38,7 +40,9 @@ const cart = {
             } else {
                 this.cartItems.splice(this.cartItems.indexOf(item), 1);
             }
+            this.count--;
         }
+        
     },
     mounted() {
         this.$parent.getJson(this.cartUrl)
@@ -54,7 +58,7 @@ const cart = {
                         <div class="cart__inner">
                             <p>Cart</p>
                             <img src="img/cart.png" alt="cart"> 
-                            <div class="cart__quantity">0</div>
+                            <div class="cart__quantity">{{count}}</div>
                         </div>
                     </button>
                     <div class="cart" v-show="showCart">
