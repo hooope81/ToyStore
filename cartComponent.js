@@ -36,6 +36,7 @@ const cart = {
                 localStorage.setItem(`${item.id}`, obj);
             }
             this.toUpdateCart();
+            
         },
         toRemoveProduct(item) {
             if (item.quantity > 1) {
@@ -53,6 +54,7 @@ const cart = {
             for (let i = 0; i < localStorage.length; i++) {
                 this.cartItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
             }
+            this.count = this.cartItems.reduce((sum, item)=> sum + item.quantity, 0);
         }
 
     },
