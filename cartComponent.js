@@ -15,44 +15,52 @@ const cart_item = {
 }
 
 const cart = {
-    data(){
+    data() {
         return {
             cartUrl: 'cart.json',
             cartItems: [],
             showCart: false,
-            count: 3
+            count: 0
         }
     },
     methods: {
         toAddProduct(item) {
-            let find = this.cartItems.find(el=> item.id === el.id);
-            if(find){
+            let find = this.cartItems.find(el => item.id === el.id);
+            if (find) {
+                localStorage.removeItem(`${item.id}`);
                 find.quantity++;
+                let obj = JSON.stringify(find);
+                localStorage.setItem(`${item.id}`, obj);
             } else {
-                let prod = Object.assign({quantity:1}, item);
-                this.cartItems.push(prod);
+                let obj = JSON.stringify(Object.assign({ quantity: 1 }, item));
+                localStorage.setItem(`${item.id}`, obj);
             }
-            this.count++;
+            this.toUpdateCart();
         },
         toRemoveProduct(item) {
-            if(item.quantity>1){
+            if (item.quantity > 1) {
+                localStorage.removeItem(`${item.id}`);
                 item.quantity--;
+                let obj = JSON.stringify(item);
+                localStorage.setItem(`${item.id}`, obj);
             } else {
-                this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                localStorage.removeItem(`${item.id}`);
             }
-            this.count--;
+            this.toUpdateCart();
+        },
+        toUpdateCart() {
+            this.cartItems = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                this.cartItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+            }
         }
-        
+
     },
     mounted() {
-        this.$parent.getJson(this.cartUrl)
-                .then(data => {
-                    for (let item of data) {
-                        this.cartItems.push(item);
-                    }
-                })
+        this.toUpdateCart();
+
     },
-    components: {cart_item},
+    components: { cart_item },
     template: ` <div class="cart__box">
                     <button @click="showCart=!showCart" class="cart__btn">
                         <div class="cart__inner">
